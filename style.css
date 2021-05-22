@@ -205,7 +205,7 @@ h1{
   cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   body {
     flex-direction: column;
     overflow: auto;
@@ -222,13 +222,16 @@ h1{
   }
   .button{
   	height:70px;
-  	margin:auto;
+  	margin:20px 0;
   }
 
   header, nav, .button{
   	position: relative;
   	width:100%;
-  	min-width: 400px
+  	min-width: 400px;
+  }
+  header{
+  	height: 100%;
   }
 
   .container-fondo, .fondo{
