@@ -4,6 +4,7 @@ function filtrar(c){
 	let x = document.getElementById("todo");
 	let y = x.querySelectorAll(".card");
 	let z = document.getElementById("fondo");
+	let texto = document.getElementById("texto");
 
 	for(i = 0; i < y.length ; i++){
 		if(y[i].id == c || c == "all"){
@@ -11,15 +12,20 @@ function filtrar(c){
 			
 
 			if(y[i].id == "akame"){
-				z.src = "akame.jpg";
+				z.src = "images/akame.jpg";
+				texto.textContent = "AKAME GA KILL";
 			}else if(c == "all"){
-				z.src = "fondo.jpg";
+				z.src = "images/fondo.jpg";
+				texto.textContent = "ANIMES";
 			} else if(y[i].id == "black"){
-				z.src = "black.jpg";
+				z.src = "images/black.jpg";
+				texto.textContent = "BLACK CLOVER";
 			}else if(y[i].id == "jujutsu"){
-				z.src = "jujutsu.png";
+				z.src = "images/jujutsu.png";
+				texto.textContent = "JUJUTSU KAISEN";
 			} else if(y[i].id == "blue") {
-				z.src = "blue.jpg";
+				z.src = "images/blue.jpg";
+				texto.textContent = "BLUE EXORCIST";
 			}
 		} else {
 			y[i].style.display = "none";
