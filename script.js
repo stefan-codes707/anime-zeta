@@ -40,15 +40,18 @@ const modal = document.querySelector(".modal");
 const modalImg = document.querySelector(".modalImg");
 const modalTxt = document.querySelector(".modalTxt");
 const close = document.querySelector(".close");
+const body = document.querySelector("body");
 
 images.forEach((image) => {
   image.addEventListener("click", () => {
     modalImg.src = image.src;
     modalTxt.innerHTML = image.alt;
     modal.style.display = "block";
+    body.style.overflow = "hidden";
 
     close.addEventListener("click", () => {
       modal.style.display = "none";
+      body.style.overflow = "auto";
     });
   });
 });
